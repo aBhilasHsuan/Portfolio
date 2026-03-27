@@ -161,7 +161,7 @@ body.loaded #cursor-glow {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 24px 48px;
+    padding: 18px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,52 +181,101 @@ body.loaded #cursor-glow {
     inset: 0;
     background: var(--accent);
     z-index: 9999;
-    transition: transform 1.2s cubic-bezier(0.7, 0, 0.3, 1);
-}
-
-#splash-bg.slide-up {
-    transform: translateY(-100%);
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 18px;
-    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
     position: fixed;
-    top: 24px;
+    top: 18px;
     left: 48px;
-    color: var(--text-primary);
     transform-origin: left top;
-    transform: scale(1.5);
     transition: all 1.2s cubic-bezier(0.7, 0, 0.3, 1);
     z-index: 10003;
-    /* Highest z-index to stay visible */
     white-space: nowrap;
 }
 
 .logo.is-loading {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.8);
+    transform: translate(-50%, -50%);
     transform-origin: center;
-    color: #000;
     position: fixed;
+    gap: 32px; /* Wider gap for splash focus */
+}
+
+/* Sizing & Color for Splash State */
+.logo.is-loading .logo-img {
+    width: 160px; /* Reduced from 220px */
+}
+
+.logo.is-loading .logo-name {
+    font-size: 38px; /* Reduced from 64px */
+    color: #000; /* Contrast against yellow splash panels */
+}
+
+.logo.is-loading .logo-title {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(0, 0, 0, 0.6); /* Contrast against yellow splash panels */
+}
+
+/* Sizing for Header State (Base Styles) */
+.logo-img {
+    width: 38px; /* Compact logo width in header */
+    height: auto;
+    display: block;
+    transition: width 0.8s var(--ease-spring);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.logo-name {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    transition: font-size 0.8s var(--ease-spring);
+}
+
+.logo-title {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    transition: font-size 0.8s var(--ease-spring);
 }
 
 .logo.is-scrolled {
-    transform: scale(1);
-    top: 24px;
+    transform: scale(0.9);
+    top: 18px;
     left: 48px;
 }
 
+.logo.is-loading .logo-text {
+    opacity: 0; /* Hide text during initial splash focus? No, maybe show it to WOW. */
+    animation: fadeIn 0.8s ease forwards 0.4s;
+}
+
 .logo .registered {
-    font-size: 10px;
-    position: absolute;
-    top: 4px;
-    right: -10px;
-    color: var(--text-secondary);
+    display: none; /* Hide if not needed for image logo */
+}
+
+.logo-placeholder {
+    width: 150px;
+    display: flex;
+    align-items: center;
 }
 
 .status {
@@ -504,6 +553,44 @@ body.menu-open::after {
     }
 }
 
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: var(--accent);
+    padding: 18px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: relative;
+    user-select: none;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 40s linear infinite;
+    width: fit-content;
+}
+
+.ticker-item {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #000;
+    padding: 0 40px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .hero-bottom {
     display: flex;
     justify-content: space-between;
@@ -531,11 +618,12 @@ body.menu-open::after {
 
 /* --- ABOUT SECTION --- */
 .about {
-    position: relative;
-    min-height: 100vh;
-    padding: 120px 48px 80px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 48px;
     background:
-        radial-gradient(circle at top right, rgba(255, 214, 0, 0.08), transparent 28%),
+        radial-gradient(circle at 10% 20%, rgba(255, 230, 0, 0.05) 0%, transparent 40%),
         linear-gradient(180deg, #0b0b0b 0%, #070707 100%);
     color: var(--text-primary);
     border-top: 1px solid var(--section-border);
@@ -798,6 +886,7 @@ body.menu-open::after {
     position: relative;
     padding-left: 14%;
     overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .portfolio-nav {
@@ -1055,12 +1144,12 @@ body.menu-open::after {
 
 /* --- FOOTER --- */
 .footer {
-    padding: 128px 48px 16px;
-    background: var(--footer-bg);
+    height: 100vh;
+    padding: 120px 48px 48px;
+    background-color: #000;
     overflow: hidden;
     position: relative;
     border-top: 1px solid var(--section-border);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1259,7 +1348,17 @@ body.menu-open::after {
 
 @media (max-width: 768px) {
     .header {
-        padding: 1rem;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .logo {
+        top: 1.2rem;
+        left: 1.5rem;
+    }
+
+    .logo.is-scrolled {
+        top: 1.2rem;
+        left: 1.5rem;
     }
 
     .status,
@@ -1354,10 +1453,6 @@ body.menu-open::after {
 
     .slide-visual {
         height: 40vh;
-    }
-
-    .portfolio-nav {
-        display: none; /* Hide sidebar on small mobile */
     }
 
     .massive-logo {
