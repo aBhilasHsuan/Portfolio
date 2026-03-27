@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhilash S | UI/UX Designer Portfolio</title>
+    <meta name="description"
+        content="UI/UX Designer Abhilash S creates mobile app designs, UX research, Figma prototypes, and polished digital experiences for brands and startups.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Abhilash S">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Splash Screen Sequence -->
+    <div id="splash-bg"></div>
+    <div class="logo is-loading" id="main-logo">Abhilash</div>
+    <div id="cursor-glow"></div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top mag-btn" id="scrollToTop" aria-label="Scroll to top">
+        &#8593;
+    </button>
+
+    <header class="header slide-down-init">
+        <div class="logo-placeholder" style="width:120px; display:block;"></div>
+        <div class="status">
+            <div class="status-indicator">
+                <span class="dot"></span>
+                <span>Available for project</span>
+            </div>
+            <div class="status-sub">EARLY FEB 2025</div>
+        </div>
+        <div class="header-actions">
+            <a href="#" download="Abhilash_CV.pdf" class="btn-cv mag-btn">RESUME <span style="font-size:0.7em; margin-left:4px;">&#9662;</span></a>
+            <a href="#contact" class="btn-talk mag-btn">LET'S TALK</a>
+            <button class="menu-btn mag-btn" id="menuToggle">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Full Screen Menu Overlay -->
+    <nav class="full-menu" id="fullMenu">
+        <button class="close-menu" id="closeMenu">&times;</button>
+        <div class="menu-content">
+            <ul class="menu-links">
+                <li><a href="#hero" class="menu-link">Home</a></li>
+                <li><a href="#about" class="menu-link">About</a></li>
+                <li><a href="#work" class="menu-link">Work</a></li>
+                <li><a href="#contact" class="menu-link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="menu-footer">
+            <div class="socials">
+                <a href="#" class="hover-link">Twitter</a>
+                <a href="#" class="hover-link">LinkedIn</a>
+                <a href="#" class="hover-link">Instagram</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-title-container">
+                    <h1 class="hero-title">Abhilash S<br>UI/UX Designer</h1>
+                </div>
+                <div class="hero-bottom fade-up delay-1">
+                    <p class="hero-subtitle">Designing <strong>mobile apps, product interfaces, and interactive prototypes</strong>
+                        with Figma, UX research, and a focus on clear user experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-shell">
+                <div class="about-center-image fade-up delay-1">
+                    <img src="assets/profile.png" alt="Portrait of Abhilash S, UI/UX Designer" class="character-img">
+                </div>
+
+                <div class="about-intro fade-up">
+                    <span class="section-label">About | Abhilash S</span>
+                    <div class="about-intro-copy">
+                        <h2 class="about-title">UI/UX designer specializing in mobile app design, UX research, Figma, and prototyping.</h2>
+                        <p class="about-summary">
+                            I help startups, recruiters, and clients evaluate polished product thinking through user-focused interfaces,
+                            clickable prototypes, and design decisions grounded in research and usability.
+                        </p>
+                        <div class="about-contact">
+                            <span>E hello@abhilash.com</span>
+                            <span>T +91 123 456 7890</span>
+                            <span>Based in India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-card fade-up delay-2">
+                        <span class="about-card-label">Experience</span>
+                        <div class="timeline-item">
+                            <div>
+                                <h3>Senior UI/UX Designer</h3>
+                                <p>Freelance / Product Design</p>
+                            </div>
+                            <span>2023 - Present</span>
+                        </div>
+                        <div class="timeline-item">
+                            <div>
+                                <h3>UI Designer</h3>
+                                <p>Agency and client collaborations across SaaS, brand, and web projects</p>
+                            </div>
+                            <span>2021 - 2023</span>
+                        </div>
+                    </article>
+
+                    <article class="about-card fade-up delay-3">
+                        <span class="about-card-label">Education</span>
+                        <div class="timeline-item">
+                            <div>
+                                <h3>Bachelor's Degree</h3>
+                                <p>Focused on digital design, communication, and interactive media fundamentals</p>
+                            </div>
+                            <span>2018 - 2021</span>
+                        </div>
+                        <div class="about-note">
+                            Continuous learning through design systems practice, UX case studies, and real product shipping.
+                        </div>
+                    </article>
+
+                    <article class="about-card fade-up delay-3">
+                        <span class="about-card-label">Technologies</span>
+                        <div class="tag-list">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive Design</span>
+                            <span>Design Systems</span>
+                            <span>Accessibility</span>
+                            <span>Interaction Design</span>
+                            <span>Prototyping</span>
+                        </div>
+                    </article>
+
+                    <article class="about-card fade-up delay-4">
+                        <span class="about-card-label">Tools</span>
+                        <div class="tag-list">
+                            <span>Figma</span>
+                            <span>Adobe XD</span>
+                            <span>Photoshop</span>
+                            <span>Illustrator</span>
+                            <span>Framer</span>
+                            <span>VS Code</span>
+                            <span>Notion</span>
+                            <span>FigJam</span>
+                        </div>
+                        <a href="#" download="Abhilash_CV.pdf" class="about-link">Download CV &darr;</a>
+                        <div class="socials">
+                            <a href="#">/Twitter (X)</a>
+                            <a href="#">/LinkedIn</a>
+                            <a href="#">/GitHub</a>
+                            <a href="#">/Dribbble</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="work" id="work">
+            <div class="work-intro fade-up">
+                <span class="section-label">Latest Work</span>
+                <div class="work-intro-copy">
+                    <h2>Selected UI/UX design projects for web and mobile products.</h2>
+                    <p>
+                        These case studies show how I use UX research, interface design, and prototyping to solve product problems
+                        for real users and growing businesses.
+                    </p>
+                </div>
+            </div>
+
+            <div class="portfolio-nav">
+                <div class="nav-item active" data-project="0">
+                    <span class="nav-line"></span>
+                    <span class="nav-text mono">ALPHA DEAL</span>
+                </div>
+                <div class="nav-item" data-project="1">
+                    <span class="nav-line"></span>
+                    <span class="nav-text mono">EDDA</span>
+                </div>
+                <div class="nav-item" data-project="2">
+                    <span class="nav-line"></span>
+                    <span class="nav-text mono">NOVYRA</span>
+                </div>
+            </div>
+
+            <div class="portfolio-container">
+                <div class="portfolio-slide" id="project-0" style="--accent-slide: #00ffd5;">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="tech-info fade-up">
+                                <div class="info-row">
+                                    <span class="label">Project</span>
+                                    <span class="value">Alpha Deal</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Role</span>
+                                    <span class="value">UX Strategy, Product Design</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Year</span>
+                                    <span class="value">2025</span>
+                                </div>
+                            </div>
+                            <h3 class="slide-title fade-up">Designing a smarter housing platform for community-scale decision making.</h3>
+                            <p class="slide-desc fade-up">Alpha Deal reimagines housing supply workflows with a dashboard experience that turns complex planning, forecasting, and collaboration into a clearer day-to-day product.</p>
+                            <a href="#" class="btn-more">View case study &rarr;</a>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="visual-mask">
+                                <img src="assets/project1.jpg" alt="Alpha Deal dashboard UI/UX case study preview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-slide" id="project-1" style="--accent-slide: #ffaa00;">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="tech-info fade-up">
+                                <div class="info-row">
+                                    <span class="label">Project</span>
+                                    <span class="value">Edda</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Role</span>
+                                    <span class="value">Brand UI, Experience Design</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Year</span>
+                                    <span class="value">2024</span>
+                                </div>
+                            </div>
+                            <h3 class="slide-title fade-up">A refined listening product built to make audiobooks feel immersive and premium.</h3>
+                            <p class="slide-desc fade-up">For Edda, the focus was a warmer product language, sharper information hierarchy, and smoother interactions that support a more cinematic audio experience.</p>
+                            <a href="#" class="btn-more">View case study &rarr;</a>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="visual-mask">
+                                <img src="assets/project2.jpg" alt="Edda mobile app interface design case study preview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-slide" id="project-2" style="--accent-slide: #b300ff;">
+                    <div class="slide-content">
+                        <div class="slide-text">
+                            <div class="tech-info fade-up">
+                                <div class="info-row">
+                                    <span class="label">Project</span>
+                                    <span class="value">Novyra</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Role</span>
+                                    <span class="value">UX Research, Interface Design</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Year</span>
+                                    <span class="value">2024</span>
+                                </div>
+                            </div>
+                            <h3 class="slide-title fade-up">Helping care teams navigate cancer trial matching with confidence and speed.</h3>
+                            <p class="slide-desc fade-up">Novyra transforms technical medical data into a guided workflow that supports faster screening, clearer recommendations, and more human-centered decision making.</p>
+                            <a href="#" class="btn-more">View case study &rarr;</a>
+                        </div>
+                        <div class="slide-visual">
+                            <div class="visual-mask">
+                                <img src="assets/project1.jpg" alt="Novyra healthcare product UX design case study preview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sections removed per request -->
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-top fade-up">
+            <div class="footer-cta">
+                <span class="section-label"
+                    style="font-size: 0.85rem; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem; display: block;">LET'S
+                    WORK TOGETHER</span>
+                <h2
+                    style="font-family: var(--font-heading); font-size: clamp(3rem, 7vw, 6rem); font-weight: 800; letter-spacing: -0.04em;">
+                    Contact Abhilash S</h2>
+                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 1rem;">hello@abhilash.com</p>
+            </div>
+            <a href="mailto:hello@abhilash.com" class="btn-large mag-btn"
+                style="background: var(--accent); color: white;">Get in touch <span class="arrow">&#8599;</span></a>
+        </div>
+        <div class="footer-middle fade-up">
+            <div class="footer-col">
+                <span class="col-title">(LINKS)</span>
+                <nav>
+                    <a href="#about" class="hover-link">About</a>
+                    <a href="#work" class="hover-link">Work</a>
+                    <a href="#contact" class="hover-link">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <span class="col-title">(SOCIALS)</span>
+                <nav>
+                    <a href="#" class="hover-link">Twitter</a>
+                    <a href="#" class="hover-link">LinkedIn</a>
+                    <a href="#" class="hover-link">Instagram</a>
+                    <a href="#" class="hover-link">Dribbble</a>
+                </nav>
+            </div>
+            <div class="footer-newsletter">
+                <span class="col-title">(NEWSLETTER)</span>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="massive-logo fade-up delay-1">ABHILASH</div>
+            <div class="legal fade-up delay-2">
+                <p>&copy; 2025 ABHILASH | PORTFOLIO. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="hover-link">Privacy Policy</a>
+                    <a href="#" class="hover-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
