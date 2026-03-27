@@ -523,6 +523,7 @@ body.menu-open::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100%;
     position: relative;
     z-index: 2;
@@ -531,12 +532,13 @@ body.menu-open::after {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(48px, 8vw, 110px);
+    font-size: clamp(56px, 11vw, 150px);
     font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    text-align: right;
-    margin-bottom: 24px;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    text-align: center;
+    margin-bottom: 64px;
+    text-transform: uppercase;
 }
 
 .hero-title .char {
@@ -593,18 +595,19 @@ body.menu-open::after {
 
 .hero-bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 48px;
     padding-bottom: 32px;
 }
 
 .hero-subtitle {
-    font-size: 20px;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     color: var(--text-secondary);
-    max-width: 400px;
-    line-height: 1.4;
+    max-width: 680px;
+    text-align: center;
+    line-height: 1.6;
 }
 
 .hero-subtitle strong {
@@ -641,11 +644,10 @@ body.menu-open::after {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 32px;
-    align-items: start;
-    min-height: 560px;
-    padding-bottom: 48px;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 120px;
+    align-items: center;
+    padding-bottom: 80px;
 }
 
 .about-intro .section-label {
@@ -883,10 +885,10 @@ body.menu-open::after {
     scroll-snap-align: start;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    padding-left: 14%;
+    padding: 0 80px;
     overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .portfolio-nav {
@@ -949,12 +951,11 @@ body.menu-open::after {
 
 .slide-content {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-    gap: 80px;
+    grid-template-columns: minmax(0, 1fr) 520px;
+    gap: 120px;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 32px;
     align-items: center;
 }
 
